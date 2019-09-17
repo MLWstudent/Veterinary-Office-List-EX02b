@@ -56,4 +56,4 @@ Woolley|Skin infection|3-Oct-16|35.00
 Buster|Laceration repair|5-Oct-16|127.00
 Jiddah|Booster shots|4-Nov-16|111.00
 
-PetName, OwnerPhone, and Service
+PetName, OwnerPhone, and Service these are the primary keys of the table, with PetName and OwnerPhone are the Foreign Keys.
