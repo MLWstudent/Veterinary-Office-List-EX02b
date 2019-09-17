@@ -2,6 +2,8 @@
 
 ## Jarod Smith and Matthew West
 
+<br />
+
 ### First Normal Form (1NF)
 
 PetName|PetType|PetBreed|PetDOB|OwnerLast|OwnerFirst|OwnerPhone|OwnerEmail|Service|Date|Charge
@@ -17,6 +19,8 @@ Jiddah|Cat|Abyssinian|1-Jul-08|Evans|Hilary|201-634-2345|HilaryEvans@somewhere.c
 
 1NF: Basically the table we started with in the exercise. Some "unknown" or "???" values were tweaked because of
 having a different value compared to the rest of the column.
+
+<br />
 
 ### Second Normal Form (2NF)
 3 Tables with the following themes: Pets, Owners, and Service
@@ -59,6 +63,8 @@ Jiddah|Booster shots|4-Nov-16|111.00
 PetName, OwnerPhone, and Service these are the primary keys of their respective tables. PetName is a foreign key in
 the service table and OwnerPhone is a foreign key within the Pets table.
 
+<br />
+
 ### Third Normal Form (3NF)
 
 #### Pets
@@ -73,3 +79,24 @@ Cedro|Cat|
 Woolley|Cat|
 Buster|Dog|Border Collie
 Jiddah|Cat|Abyssinian
+
+#### Owners
+
+OwnerPhone|OwnerLast|OwnerFirst|OwnerEmail
+----------|---------|----------|----------
+201-823-5467|Downs|Marsha|MarshaDowns@somewhere.com
+201-735-9812|James|Richard|RichardJames@somewhere.com
+201-823-6578|Frier|Liz|LizFrier@somewhere.com
+201-634-7865|Trent|Miles|MilesTrent@somewhere.com
+201-634-2345|Evans|Hilary|HilaryEvans@somewhere.com
+
+#### Service
+
+Service|Charge
+-------|------
+Ear infection|65.00
+Nail clip|27.00
+One year shots|42.50
+Skin infection|35.00
+Laceration repair|127.00
+Booster shots|111.00
