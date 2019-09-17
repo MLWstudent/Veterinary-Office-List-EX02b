@@ -50,15 +50,15 @@ OwnerPhone|OwnerLast|OwnerFirst|OwnerEmail
 
 #### Service
 
-PetName|Service|Date|Charge
--------|-------|----|------
-King|Ear infection|17-Aug-16|65.00
-Teddy|Nail clip|5-Sep-16|27.00
-AJ|One year shots|5-May-16|42.50
-Cedro|Nail clip|5-Sep-16|27.00
-Woolley|Skin infection|3-Oct-16|35.00
-Buster|Laceration repair|5-Oct-16|127.00
-Jiddah|Booster shots|4-Nov-16|111.00
+ServiceID|PetName|Service|Date|Charge
+---------|-------|-------|----|------
+1|King|Ear infection|17-Aug-16|65.00
+2|Teddy|Nail clip|5-Sep-16|27.00
+3|AJ|One year shots|5-May-16|42.50
+4|Cedro|Nail clip|5-Sep-16|27.00
+5|Woolley|Skin infection|3-Oct-16|35.00
+6|Buster|Laceration repair|5-Oct-16|127.00
+7|Jiddah|Booster shots|4-Nov-16|111.00
 
 PetName, OwnerPhone, and Service these are the primary keys of their respective tables. PetName is a foreign key in
 the service table and OwnerPhone is a foreign key within the Pets table.
