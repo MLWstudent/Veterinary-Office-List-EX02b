@@ -60,7 +60,7 @@ ServiceID|PetName|Service|Date|Charge
 6|Buster|Laceration repair|5-Oct-16|127.00
 7|Jiddah|Booster shots|4-Nov-16|111.00
 
-PetName, OwnerPhone, and Service these are the primary keys of their respective tables. PetName is a foreign key in
+PetName, OwnerPhone, and ServiceID these are the primary keys of their respective tables. PetName is a foreign key in
 the service table and OwnerPhone is a foreign key within the Pets table.
 
 <br />
