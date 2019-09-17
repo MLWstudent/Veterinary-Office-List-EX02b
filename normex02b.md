@@ -100,3 +100,17 @@ One year shots|42.50
 Skin infection|35.00
 Laceration repair|127.00
 Booster shots|111.00
+
+#### Pet Service
+
+PetName|Service|Date
+-------|-------|----
+King|Ear infection|17-Aug-16
+Teddy|Nail clip|5-Sep-16
+AJ|One year shots|5-May-16
+Cedro|Nail clip|5-Sep-16
+Woolley|Skin infection|3-Oct-16
+Buster|Laceration repair|5-Oct-16
+Jiddah|Booster shots|4-Nov-16
+
+For breaking down these tables in the normalization process further we seeked to eliminate more redundancies within the dataset. We spilt up the service table to distinguish between each particular service type and then what each pet needed. This makes adding services for the same pet in the future, for example, an easier process. For the pet table we removed PetDOB as it wasn't a relavent field and wasn't dependant or determinant for any other values.
