@@ -56,4 +56,20 @@ Woolley|Skin infection|3-Oct-16|35.00
 Buster|Laceration repair|5-Oct-16|127.00
 Jiddah|Booster shots|4-Nov-16|111.00
 
-PetName, OwnerPhone, and Service these are the primary keys of the table, with PetName and OwnerPhone are the Foreign Keys.
+PetName, OwnerPhone, and Service these are the primary keys of their respective tables. PetName is a foreign key in
+the service table and OwnerPhone is a foreign key within the Pets table.
+
+### Third Normal Form (3NF)
+
+#### Pets
+
+PetName|PetType|PetBreed
+-------|-------|--------
+King|Dog|Std. Poodle
+Teddy|Cat|Cashmier
+Filo|Dog|Std. Poodle
+AJ|Dog|Collie Mix
+Cedro|Cat|
+Woolley|Cat|
+Buster|Dog|Border Collie
+Jiddah|Cat|Abyssinian
