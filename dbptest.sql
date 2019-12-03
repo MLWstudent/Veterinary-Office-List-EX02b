@@ -7,7 +7,7 @@ CREATE  TABLE PLAYERS(
     GradYear            Int(4)          NOT NULL,
     StudyHours          Int(2)          NOT NULL,
     CommServiceHours    Int(3)          NOT NULL,
-    CONSTRAINT          PLAYERS_PK      PRIMARY KEY(JerseyNumber)
+    CONSTRAINT          PLAYERS_PK      PRIMARY KEY(PlayerID)
     );
 
 CREATE  TABLE COACHES(
@@ -18,7 +18,7 @@ CREATE  TABLE COACHES(
     Position            Char(25)   	NOT NULL,     
     Title               Char(30) 	NOT NULL,
     Travel              Char(3) 	NOT NULL,
-    CONSTRAINT          COACHES_PK  	PRIMARY KEY(CoachID)
+    CONSTRAINT          COACHES_PK  	PRIMARY KEY(CoachID),
     CONSTRAINT          COACH_PLAYERS_FK    FOREIGN KEY(PlayerID)
                             REFERENCES PLAYERS(PlayerID)
                                 ON UPDATE CASCADE
@@ -33,7 +33,7 @@ CREATE  TABLE HIGHSCHOOL(
     State               Char(2) 		NOT NULL,
     ZIP                 Int(5) 			NOT NULL,
     Distance            Int(5) 			NOT NULL,
-    CONSTRAINT          HIGHSCHOOL_PK  	PRIMARY KEY(HighSchoolID)
+    CONSTRAINT          HIGHSCHOOL_PK  	PRIMARY KEY(HighSchoolID),
 	CONSTRAINT          HIGH_PLAYERS_FK    FOREIGN KEY(PlayerID)
                             REFERENCES PLAYERS(PlayerID)
                                 ON UPDATE CASCADE
@@ -46,7 +46,7 @@ CREATE  TABLE MEDICALSTAFF(
     PlayerID		Int(4)			NOT NULL,
     Title               Char(50) 		NOT NULL,
     Travel              Char(1) 		NOT NULL,
-    CONSTRAINT          MEDICALSTAFF_PK		PRIMARY KEY(StaffID)
+    CONSTRAINT          MEDICALSTAFF_PK		PRIMARY KEY(StaffID),
 	CONSTRAINT          MEDIC_PLAYERS_FK    FOREIGN KEY(PlayerID)
                             REFERENCES PLAYERS(PlayerID)
                                 ON UPDATE CASCADE
@@ -72,8 +72,8 @@ CREATE  TABLE PLAYEREQ(
     Travel              Char(1)    		NOT NULL,
     ExpectedLife        Int(2) 			NOT NULL,
     CONSTRAINT          PLAYEREQ_PK            	PRIMARY KEY(PlayerEQID),
-    CONSTRAINT          PLAYEREQ_PLAYERS_FK     FOREIGN KEY(JerseyNumber)
-                            REFERENCES PLAYERS(JerseyNumber)
+    CONSTRAINT          PLAYEREQ_PLAYERS_FK     FOREIGN KEY(PlayerID)
+                            REFERENCES PLAYERS(PlayerID)
                                 ON UPDATE CASCADE
     );  
 
@@ -84,8 +84,8 @@ CREATE  TABLE MEDRECORDS(
     InjuryStatus        Char(50)   		NULL,
     Allergies           Char(50) 		NULL,
     CONSTRAINT          MEDRECORDS_PK     PRIMARY KEY(RecordID),
-    CONSTRAINT          MEDREC_PLAYERS_FK        FOREIGN KEY(JerseyNumber)
-                            REFERENCES PLAYERS(JerseyNumber)
+    CONSTRAINT          MEDREC_PLAYERS_FK        FOREIGN KEY(PlayerID)
+                            REFERENCES PLAYERS(PlayerID)
                                 ON UPDATE CASCADE
                                 ON DELETE CASCADE,
     CONSTRAINT          MEDREC_MEDIC_FK        FOREIGN KEY(StaffID)
