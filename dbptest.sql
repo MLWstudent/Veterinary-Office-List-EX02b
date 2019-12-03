@@ -11,13 +11,13 @@ CREATE  TABLE PLAYERS(
     );
 
 CREATE  TABLE COACHES(
-    CoachID             Int(3) 			NOT NULL,
+    CoachID             Int(3) 		NOT NULL,
     FirstName           Char(30)    	NOT NULL,
-    LastName            Char(30)   		NOT NULL,
-    PlayerID			Int(4)			NOT NULL,
-    Position            Char(25)   		NOT NULL,     
-    Title               Char(30) 		NOT NULL,
-    Travel              Char(3) 		NOT NULL,
+    LastName            Char(30)   	NOT NULL,
+    PlayerID		Int(4)		NOT NULL,
+    Position            Char(25)   	NOT NULL,     
+    Title               Char(30) 	NOT NULL,
+    Travel              Char(3) 	NOT NULL,
     CONSTRAINT          COACHES_PK  	PRIMARY KEY(CoachID)
     CONSTRAINT          COACH_PLAYERS_FK    FOREIGN KEY(PlayerID)
                             REFERENCES PLAYERS(PlayerID)
@@ -26,10 +26,10 @@ CREATE  TABLE COACHES(
 
 CREATE  TABLE HIGHSCHOOL(
     HighSchoolID        Int(3) 			NOT NULL,
-    HighSchoolName      Char(50)     	NOT NULL,
-	PlayerID			Int(4)			NOT NULL,
-    StreetAddress       Char(100)   	NOT NULL,
-    City                Char(30)        NOT NULL,
+    HighSchoolName      Char(50)     		NOT NULL,
+    PlayerID		Int(4)			NOT NULL,
+    StreetAddress       Char(100)   		NOT NULL,
+    City                Char(30)        	NOT NULL,
     State               Char(2) 		NOT NULL,
     ZIP                 Int(5) 			NOT NULL,
     Distance            Int(5) 			NOT NULL,
@@ -41,9 +41,9 @@ CREATE  TABLE HIGHSCHOOL(
 
 CREATE  TABLE MEDICALSTAFF(
     StaffID             Int(3) 			NOT NULL,
-    FirstName			Char(30)		NOT NULL,
-    LastName            Char(30)    	NOT NULL,
-	PlayerID			Int(4)			NOT NULL,
+    FirstName		Char(30)		NOT NULL,
+    LastName            Char(30)    		NOT NULL,
+    PlayerID		Int(4)			NOT NULL,
     Title               Char(50) 		NOT NULL,
     Travel              Char(1) 		NOT NULL,
     CONSTRAINT          MEDICALSTAFF_PK		PRIMARY KEY(StaffID)
@@ -68,7 +68,7 @@ CREATE  TABLE RECRUITS(
 CREATE  TABLE PLAYEREQ(
     PlayerEQID          Int(3) 			NOT NULL,
     PlayerID        	Int(4)     		NOT NULL,
-    Description         Char(100)   	NOT NULL,
+    Description         Char(100)   		NOT NULL,
     Travel              Char(1)    		NOT NULL,
     ExpectedLife        Int(2) 			NOT NULL,
     CONSTRAINT          PLAYEREQ_PK            	PRIMARY KEY(PlayerEQID),
@@ -78,7 +78,7 @@ CREATE  TABLE PLAYEREQ(
     );  
 
 CREATE  TABLE MEDRECORDS(
-	RecordID			Int(3)			NOT NULL,
+    RecordID		Int(3)			NOT NULL,
     StaffID             Int(3) 			NOT NULL,
     PlayerID        	Int(4)     		NOT NULL,
     InjuryStatus        Char(50)   		NULL,
@@ -96,9 +96,9 @@ CREATE  TABLE MEDRECORDS(
 
 CREATE  TABLE TRAINEREQ(
     TrainerEQID         Int(3) 			NOT NULL,
-    StaffID        		Int(3) 			NULL,
-    Description         Char(100)   	NOT NULL,
-    Travel              Char(1)        	NOT NULL,
+    StaffID        	Int(3) 			NULL,
+    Description         Char(100)   		NOT NULL,
+    Travel              Char(1)        		NOT NULL,
     ExpectedLife        Int(2) 			NOT NULL,
     CONSTRAINT          TRAINEREQ_PK    PRIMARY KEY(TrainerEQID),
     CONSTRAINT 		TRAINEREQ_MEDIC_FK 	FOREIGN KEY(StaffID)
